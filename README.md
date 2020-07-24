@@ -34,17 +34,20 @@ Please enjoy our results and have fun trying out our models!
 - `pip install -r requirements.txt`
 
 ### Download model weights
+> 建议直接到网站下载，直接执行该命令会由于未进行用户验证而导致无响应。
 - Run `bash weights/download_weights.sh`
 
 
 ## (2) Run our models
  
 ### Global classifer
+> 用于判断图片是否被P过
 ```
 python global_classifier.py --input_path examples/modified.jpg --model_path weights/global.pth
 ```
 
 ### Local Detector
+> 将会生成3个图片：输入图、p图痕迹指示图、反p处理图
 ```
 python local_detector.py --input_path examples/modified.jpg --model_path weights/local.pth --dest_folder out/
 ```
